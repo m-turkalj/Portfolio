@@ -1,0 +1,48 @@
+.intro {
+    text-align: center;
+
+    &__card {
+        border: 2px solid #000157;
+        box-shadow: -2px 38px 45px -23px #9c9c9c;
+        border-radius: 15px;
+        padding: rem-calc(16px);
+        height: 100%;
+
+        @include lg {
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        & p {
+            line-height: rem-calc(36px);
+        }
+    }
+
+    &__text {
+        margin-top: rem-calc(24px);
+    }
+}
+
+// Borders for intro section
+.border-t {
+    @include lg {
+        display: inline-block;
+        border-top: 2px solid $primary-color;
+        width: 85%;
+        position: absolute;
+        left: 7%;
+        top: -10%;
+    }
+}
+
+.border-r {
+    @include lg {
+        display: block;
+        border-right: 2px solid $primary-color;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;  
+    }
+}

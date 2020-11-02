@@ -1,0 +1,131 @@
+// -----------BREAKPOINT MIXINS--------------------------------------
+
+// Extra Small devices
+@mixin xs {
+    @media only screen and (min-width: $screen-xs-min) {
+        @content;
+    }
+}
+
+// Small devices
+@mixin sm {
+    @media only screen and (min-width: $screen-sm-min) {
+        @content;
+    }
+}
+ 
+ // Medium devices
+ @mixin md {
+    @media only screen and (min-width: $screen-md-min) {
+        @content;
+    }
+}
+ 
+ // Large devices
+ @mixin lg {
+    @media only screen and (min-width: $screen-lg-min) {
+        @content;
+    }
+}
+ 
+ // Extra large devices
+ @mixin xl {
+    @media only screen and (min-width: $screen-xl-min) {
+        @content;
+    }
+}
+
+ // Custom devices
+@mixin rwd($screen) {
+    @media only screen and (min-width: $screen+'px') {
+        @content;
+    }
+}
+
+
+// -----------REM-CALC MIXINS--------------------------------------
+
+@mixin font-size($font-size, $line-height, $font-weight ) {
+    font-size: rem-calc($font-size);
+    line-height: rem-calc($line-height);
+    font-weight: $font-weight;
+}
+
+
+// -----------FLEXBOX GRID MIXINS--------------------------------------
+// Mixin with all column properties
+@mixin col-props($i, $columns, $gutter) {
+    box-sizing: border-box;
+    width: col-width($i, $columns);
+    padding-left: $gutter/2;
+    padding-right: $gutter/2;
+}
+
+// Loop function where we create two classes: 
+// 1.-for columns (-desk-12 or -tab-12)
+// 2.-for shift columns (-desk-shift-12)
+@mixin columns-loop($name, $columns, $gutter) {
+    @for $i from 0 through $columns {
+        &-#{$name}-#{$i} {
+            @include col-props($i, $columns, $gutter);
+        }
+        &-#{$name}-shift-#{$i} {
+            margin-left: col-width($i, $columns);
+        }
+    }
+}
+
+// Mixin for two classes - '.grid' and '.grid-0' class
+@mixin grid-base($width) {
+    box-sizing: border-box;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    max-width: $grid-desktop-breakpoint;
+    width: $width;
+}
+
+
+// -----------MIXINS FOR CSS STYLES - center content, uppercase, display:none etc.. ------------------------------------
+
+// --- Generalize styles ---
+@mixin mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin d-lg-none {
+    @include lg {
+        display: none;
+    }
+}
+
+@mixin m-t-b {
+    margin: rem-calc(32px) 0;
+}
+
+// --- Flex styles ---
+@mixin align-items-center {
+    align-items: center;
+}
+
+@mixin justify-content-center {
+    justify-content: center
+}
+
+// --- Text styles ---
+@mixin center-uppercase {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin text-capitalize {
+    text-transform: capitalize;
+}
+
+@mixin text-center-width {
+    max-width: rem-calc(480px);
+    margin-left: auto;
+    margin-right: auto;
+}

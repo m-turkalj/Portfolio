@@ -1,0 +1,90 @@
+body {
+    font-family: $font-family-base;
+    background-color: $body-base-color;
+    color: $text-color;
+    overflow-x: hidden;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+img {
+    width: 100%;
+}
+
+hr {
+    margin: 0;
+    border: 0px #0000001c solid;
+    box-shadow: 0 0 6px 1px #0000001c;
+}
+
+// --- Generalize styles ---
+.mx-auto {
+    @include mx-auto
+}
+
+.d-lg-none {
+    @include d-lg-none
+}
+
+// --- Flex styles ---
+.align-items-center {
+    @include align-items-center
+}
+
+.justify-content-center {
+    @include justify-content-center
+}
+
+// --- Text styles ---
+.center-uppercase {
+    @include center-uppercase
+}
+
+.text-capitalize {
+    @include text-capitalize
+}
+
+.text-center-width {
+    @include text-center-width
+}
+
+// Used for text not shrink too much
+.showcase__description {
+    font-size: $font-desktop-base;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 390px;
+
+    @include lg {
+        max-width: 556px;
+    }
+}
+
+.text-align-left {
+    @include lg {
+    text-align: left;
+    }
+}
+
+// Margin top and bottom 16px
+.m-t-b {
+    position: relative;
+    @include m-t-b
+}
+
+// Margin bottom for h2 and h3 title
+.m-bottom {
+    margin-bottom: $wrapper-xl;
+}
+
+.m-bottom-s {
+    margin-bottom: rem-calc(48px);
+}

@@ -1,0 +1,108 @@
+// Icomoon style for icons
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-e-mail-logo:before {
+    content: "\e909";
+}
+
+.icon-css-logo:before {
+    content: "\e908";
+}
+
+.icon-npm:before {
+    content: "\e900";
+    color: #CC3534;
+}
+
+.icon-bem-logo:before {
+    content: "\e907";
+    color: #080808;
+}
+
+.icon-git:before {
+    content: "\e901";
+    color: #de4c36;
+}
+
+.icon-git-cat-logo:before {
+    content: "\e90a";
+}
+
+.icon-html-logo:before {
+    content: "\e90c";
+}
+
+.icon-linkedIn-logo:before {
+    content: "\e90d";
+}
+
+.icon-m-logo:before {
+    content: "\1f388";
+  }
+
+.icon-sass-logo:before {
+    content: "\e90f";
+    color: #CC6699;
+}
+
+.icon-list:before {
+    content: "\e906";
+}
+
+.icon-responsive-design-logo:before {
+    content: "\e903";
+}
+
+.icon-javascript-logo:before {
+    content: "\e902";
+}
+
+.icon {
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: middle;
+    color: $text-color;
+    font-size: rem-calc(16px);
+}
+.icon-list,
+.icon-html-logo,
+.icon-css-logo {
+    color:$primary-color;
+}
+
+.icon-m-logo {
+    color: $primary-color; 
+    font-size: rem-calc(28px);
+}
+
+.icon-list,
+.icon-html-logo,
+.icon-css-logo,
+.icon-sass-logo,
+.icon-npm,
+.icon-git,
+.icon-bem-logo,
+.icon-javascript-logo {
+    font-size: rem-calc(48px);
+}
+
+.icon-e-mail-logo,
+.icon-git-cat-logo,
+.icon-linkedIn-logo,
+.icon-responsive-design-logo {
+    font-size: rem-calc(32px);
+    color: $primary-color;
+}

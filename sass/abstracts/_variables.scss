@@ -1,0 +1,100 @@
+// -----------BREAKPOINT VARIABLES-------------------------------------- 
+
+// Small smartphones
+$screen-xs-min: 370px;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// -----------FONT VARIABLES-------------------------------------- 
+
+$font-family-base: 'OpenSans-Regular' !important;
+$font-family-secondary: 'OpenSans-Bold' !important;
+$font-family-title: 'nunitobold' !important;
+
+// Font weight
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Mobile fonts
+$font-size-base: rem-calc(15px);
+$heading-1: (24px, 33px, $font-weight-bold) !default;
+$heading-2: (22px, 33px, $font-weight-bold) !default;
+$heading-3: (19px, 33px, $font-weight-bold) !default;
+
+// Desktop fonts
+$font-desktop-base: rem-calc(18px);
+$heading-desktop-1: (36px, 44px, $font-weight-bold) !default;  
+$heading-desktop-2: (28px, 32px, $font-weight-bold) !default; 
+$heading-desktop-3: (24px, 24px, $font-weight-bold) !default;
+// -----------COLORS VARIABLES-------------------------------------- 
+
+// Color for <body>
+$body-base-color: #fff;
+
+// Global text color on <body>
+$text-color: #333;
+
+// Primary blue color
+$primary-color: #00334E;
+
+// Secondary gray color used for background
+$secondary-color: #F8F8F8;
+
+$secondary-color-darker-1:#E3E3E3;
+$secondary-color-darker-2:#C4C4C4;
+
+// -----------WRAPPER VARIABLES-------------------------------------- 
+
+$wrapper-xxs: rem-calc(28px);
+
+$wrapper-xs: rem-calc(32px);
+$wrapper-sm: rem-calc(60px);
+$wrapper-lg: rem-calc(80px);
+$wrapper-xl: rem-calc(100px);
+
+$wrapper-xxl: rem-calc(200px);
+
+// -----------VARIABLES FOR CSS GRID------------------------------------
+
+// desktop grid
+$grid-desktop-columns: 12;
+$grid-desktop-sideMargin: 80px;
+$grid-desktop-gutter: 40px;
+$grid-desktop-breakpoint: 1400px;
+
+// tablet grid
+$grid-tablet-columns: 12;
+$grid-tablet-sideMargin: 60px;
+$grid-tablet-gutter: 30px;
+$grid-tablet-breakpoint: 1020px;
+
+// mobile grid
+$grid-mobile-columns: 4;
+$grid-mobile-sideMargin: 32px;
+$grid-mobile-gutter: 20px;
+$grid-mobile-breakpoint: 620px;
+
+// pixels to % variables
+$desk-grid-width: 100% - (($grid-desktop-sideMargin * 2 / $grid-desktop-breakpoint) * 100%);
+ 
+$tab-grid-width: 100% - (($grid-tablet-sideMargin * 2 / $grid-tablet-breakpoint) * 100%);
+  
+$mob-grid-width: 100% - (($grid-mobile-sideMargin * 2 / $grid-mobile-breakpoint) * 100%);
+  
+
+$desk-gutter: (($grid-desktop-gutter / ($grid-desktop-breakpoint - ($grid-desktop-sideMargin * 2))) * 100%);
+
+$tab-gutter: (($grid-tablet-gutter / ($grid-tablet-breakpoint - ($grid-tablet-sideMargin * 2))) * 100%);
+  
+$mob-gutter: (($grid-mobile-gutter / ($grid-mobile-breakpoint - ($grid-mobile-sideMargin * 2))) * 100%);
+  

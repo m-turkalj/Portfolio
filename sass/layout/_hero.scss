@@ -1,0 +1,68 @@
+.hero {
+    color: $text-color;
+    background-image: url(../img/hero-bckg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 45%;
+    background-attachment: fixed;
+    position: relative;
+    height: 80vh;
+
+    &::before {
+
+        @include md {
+            content: " ";
+            right: 0;
+            top: 0;
+            opacity: .04;
+            left: 0;
+            height: 110px;
+            position: absolute;
+            z-index: 1;
+            background-position: center bottom;
+            background-size: cover;
+            background-image: url(../img/SVG/spiral-bckg.svg);
+        }     
+    }
+
+    @include sm {
+        background-attachment: inherit;
+    }
+
+    @include md {
+        height: 100vh;
+        background-position-y: 75%;
+    }
+
+    &__inner {
+        text-align: center;
+        position: relative;
+        z-index: 10;
+        padding: $wrapper-sm 0;
+
+        @include md {
+            padding: rem-calc(150px) 0;
+        }
+    }
+
+    &__divider {
+        position: relative;
+        margin-top: $wrapper-xs;
+
+        @include xs {
+            margin-top: $wrapper-xl;
+        }
+    }
+
+
+    &__link {
+        border-bottom: 1px dotted;
+        text-decoration: none;
+        color: $text-color;
+
+        &:hover {
+            text-decoration: none;
+            color: #ffcb05; 
+        }
+    }
+}

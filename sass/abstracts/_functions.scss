@@ -1,0 +1,12 @@
+// -----------REM-CALC FUNCTION--------------------------------------
+
+@function rem-calc($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+// -----------COL-WIDTH FUNCTION - for columns width --------------------------------------
+
+@function col-width($i, $columns) {
+    @return 100% / $columns * $i;
+}

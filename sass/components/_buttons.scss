@@ -1,0 +1,35 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    color: $body-base-color;
+    background: transparent;
+    letter-spacing: 0.1em;
+    border: 1px solid transparent;
+    background-color: transparent;
+    text-decoration: none;
+    transition: all .5s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding: rem-calc(12px) rem-calc(13px);
+    box-sizing: content-box;
+}
+
+.btn-outline-primary {
+    color: $primary-color;
+    border-color: $primary-color;
+    border-radius: 30px;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $primary-color;
+        color: $body-base-color;
+    }
+
+    &:active,
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 51, 78, 0.5);
+    }
+}

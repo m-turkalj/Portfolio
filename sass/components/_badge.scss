@@ -1,0 +1,17 @@
+.badge {
+    display: inline;
+    padding: rem-calc(3px) rem-calc(4.8px);
+    font-size: 75%;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+    border-radius: rem-calc(4px);
+    color: $body-base-color;
+    background-color: $primary-color;
+}
+
+.badge-sm {
+    font-size: 12px;
+    margin-left: rem-calc(8px);
+}
